@@ -1,0 +1,88 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Osama Awad - Movie Showcase</title> <!-- Bootstrap CSS --> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <style> .hero { background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover no-repeat; color: white; text-align: center; padding: 120px 20px; position: relative; } .hero::after { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); } .hero h1, .hero p { position: relative; z-index: 1; } .card img { height: 350px; object-fit: cover; } .social-icons a { color: white; margin: 0 10px; font-size: 1.5rem; } </style> </head> <body>
+
+<!-- Navbar --> <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <div class="container-fluid"> <a class="navbar-brand" href="#home">Osama Awad</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarNav"> <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link" href="#about">About</a></li> <li class="nav-item"><a class="nav-link" href="#showtimes">Showtimes</a></li> <li class="nav-item"><a class="nav-link" href="#picks">Student Picks</a></li> <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li> </ul> </div> </div> </nav>
+
+<!-- Hero --> <header id="home" class="hero"> <h1 class="display-3">Osama Awad’s Movie World</h1> <p class="lead">Discover blockbusters, hidden gems, and student favorites.</p> </header>
+
+<!-- About Section --> <section id="about" class="py-5"> <div class="container"> <h2>About</h2> <p>This site was built by student Osama Awad to showcase Bootstrap features in a creative way. It combines navigation bookmarks, movie cards, badges, and unique sections.</p> </div> </section>
+
+<!-- Showtimes Section --> <section id="showtimes" class="py-5 bg-light"> <div class="container"> <h2>Showtimes</h2> <div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <!-- Kong: Skull Island -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTcwMjcxYTQtYjJlOS00YTE1LWIyZGYtOGRlOTBlMWZmYTliXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Kong Skull Island">
+      <div class="card-body">
+        <h5 class="card-title">Kong: Skull Island</h5>
+        <p class="card-text">Scientists and soldiers explore a mysterious island, only to encounter the mighty Kong.</p>
+        <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ghost in the Shell -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/M/MV5BNzBkNjdjZTctNjdhOS00NmIyLTlkNjQtY2EwNGMwYmZjNTIxXkEyXkFqcGc@._V1_.jpg" class="card-img-top" alt="Ghost in the Shell">
+      <div class="card-body">
+        <h5 class="card-title">Ghost in the Shell</h5>
+        <p class="card-text">Major, a cyber-enhanced human, uncovers secrets about her past in a futuristic world.</p>
+        <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Beauty and the Beast -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://lumiere-a.akamaihd.net/v1/images/p_beautyandthebeast_19752_32e65c36.jpeg" class="card-img-top" alt="Beauty and the Beast">
+      <div class="card-body">
+        <h5 class="card-title">Beauty and the Beast</h5>
+        <p class="card-text">Belle discovers love and magic in an enchanted castle with a cursed prince.</p>
+        <span class="badge rounded-pill bg-info text-dark">12:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">1:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">3:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">5:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">7:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">9:30 p.m.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extra Movie: Inception -->
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/51s+z7zKqjL._AC_.jpg" class="card-img-top" alt="Inception">
+      <div class="card-body">
+        <h5 class="card-title">Inception</h5>
+        <p class="card-text">A skilled thief enters dreams to steal secrets, but faces a mission unlike any other.</p>
+        <span class="badge rounded-pill bg-info text-dark">11:00 a.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">2:00 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">4:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">7:30 p.m.</span>
+        <span class="badge rounded-pill bg-info text-dark">10:00 p.m.</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div> </section>
+
+<!-- Student Picks Section --> <section id="picks" class="py-5"> <div class="container"> <h2>Student Picks</h2> <p>Osama’s favorite genres include science fiction, fantasy, and adventure. These genres inspire creativity and imagination, making them perfect for students who love exploring new worlds.</p> <ul class="list-group"> <li class="list-group-item">Science Fiction 🚀</li> <li class="list-group-item">Fantasy 🧙</li> <li class="list-group-item">Adventure 🌍</li> <li class="list-group-item">Animation 🎨</li> </ul>
+<!-- Deals & Membership Section --> <section id="deals" class="py-5 bg-light"> <div class="container"> <h2>Deals & Membership</h2> <div class="row"> <div class="col-md-6"> <div class="p-4 mb-3 bg-primary text-white rounded"> <h4>Special Deals</h4> <p>Get 20% off your first ticket purchase with code <strong>OSAMA20</strong>. Limited time offer!</p> </div> </div> <div class="col-md-6"> <div class="p-4 mb-3 bg-success text-white rounded"> <h4>Membership Benefits</h4> <ul> <li>Early access to new releases</li> <li>Exclusive member-only screenings</li> <li>Discounts on concessions</li> <li>Monthly newsletter with movie news</li> </ul> </div> </div> </div> </div> </section>
+
+
+<!-- Footer --> <footer class="bg-dark text-white text-center py-4"> <div class="container"> <p>Connect with Osama Awad:</p> <div class="social-icons"> <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a> <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a> <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a> <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a> </div> <p class="mt-3">© 2024 Osama Awad. All rights reserved.</p> </div> </footer>
+
+
