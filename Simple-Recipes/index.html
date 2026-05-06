@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipes</title>
+    <style>
+        /* Base Styling & Box Model Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Enable fluid movement when clicking anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+
+        /* Top Navigation Bar Construction */
+        header {
+            background-color: #0d876d;
+            border-bottom: 4px solid #f2a9ba;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #f2a9ba;
+            padding: 15px 30px;
+            display: block;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hover-triggered Dropdown logic */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        /* Nested Link appearance */
+        .dropdown-content a {
+            color: #0d876d;
+            padding: 12px 16px;
+            text-align: center;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover > a {
+            background-color: #e0f2f1;
+            color: #0d876d;
+        }
+
+        /* Central Layout Constraints */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Section Spacing and Scroll Offsets */
+        .recipe-section {
+            margin-bottom: 60px;
+            padding-top: 60px; 
+            margin-top: -60px; 
+        }
+
+        .recipe-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .recipe-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Container styling for text-heavy content */
+        .recipe-instructions, .about-content {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Page Bottom Branding */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#featured">Recipes</a>
+                    <div class="dropdown-content">
+                        <a href="#featured">Featured Recipe</a>
+                        <a href="#pasta">Pasta</a>
+                        <a href="#chicken">Chicken</a>
+                        <a href="#pork">Pork</a>
+                        <a href="#biscuits">Biscuits</a>
+                        <a href="#fish">Fish</a>
+                        <a href="#dessert">Dessert</a>
+                    </div>
+                </li>
+                <!-- Jump to Biography Section -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-title">Simple Recipes</h1>
+
+        <!-- Highlighting the Pizza & Broccoli Dish -->
+        <section id="featured" class="recipe-section">
+            <h2>Featured Recipe: Pizza & Broccoli</h2>
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pizza and Broccoli" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Pre-heat oven to 425°F. Roll out pizza dough and top with tomato sauce, mozzarella cheese, and your favorite toppings. Roast broccoli florets with olive oil, salt, and parmesan. Bake both until golden brown and delicious.</p>
+            </div>
+        </section>
+
+        <!-- Italian-Inspired Pasta Component -->
+        <section id="pasta" class="recipe-section">
+            <h2>Easy Garlic Pasta</h2>
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pasta" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Boil pasta until al dente. In a pan, sauté minced garlic in olive oil until fragrant. Toss the cooked pasta in the garlic oil, add red pepper flakes, fresh parsley, and a generous sprinkle of parmesan cheese.</p>
+            </div>
+        </section>
+
+        <!-- Poultry Entree Component -->
+        <section id="chicken" class="recipe-section">
+            <h2>Lemon Herb Chicken</h2>
+            <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chicken" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Marinate chicken breasts in lemon juice, olive oil, rosemary, and thyme. Sear in a hot skillet for 6-7 minutes on each side until cooked through. Serve with a side of roasted vegetables.</p>
+            </div>
+        </section>
+
+        <!-- Savory Meat Component -->
+        <section id="pork" class="recipe-section">
+            <h2>Glazed Pork Chops</h2>
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pork Chops" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Season pork chops with salt and pepper. Sear in a pan. Create a simple glaze using honey, soy sauce, and a dash of apple cider vinegar. Pour over the chops and simmer until sticky and fully cooked.</p>
+            </div>
+        </section>
+
+        <!-- Bakery/Side Bread Component -->
+        <section id="biscuits" class="recipe-section">
+            <h2>Buttermilk Biscuits</h2>
+            <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biscuits" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Mix flour, baking powder, and salt. Cut in cold butter until crumbly. Stir in buttermilk just until combined. Pat out the dough, cut into rounds, and bake at 400°F until golden brown and flaky.</p>
+            </div>
+        </section>
+
+        <!-- Seafood Entree Component -->
+        <section id="fish" class="recipe-section">
+            <h2>Baked Salmon</h2>
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fish" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> Place salmon fillets on a baking sheet. Brush with a mix of melted butter, garlic, and dill. Bake at 375°F for 12-15 minutes until the fish flakes easily with a fork.</p>
+            </div>
+        </section>
+
+        <!-- Sweets and Treats Component -->
+        <section id="dessert" class="recipe-section">
+            <h2>Simple Berry Parfait</h2>
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dessert" class="recipe-image">
+            <div class="recipe-instructions">
+                <p><strong>Instructions:</strong> In a glass, layer Greek yogurt, your favorite granola, and a mix of fresh berries (strawberries, blueberries, raspberries). Repeat the layers and top with a drizzle of honey.</p>
+            </div>
+        </section>
+
+        <!-- Updated Narrative Biography -->
+        <section id="about" class="recipe-section">
+            <h2>Our Story</h2>
+            <div class="about-content">
+                <p>Welcome to our kitchen! Simple Recipes was born from a very basic idea: great food doesn't need to be complicated. We know that life gets busy, and the last thing you want is a grocery list with twenty obscure ingredients or a technique that requires years of culinary school. Based in the heart of the U.S., we’ve curated a collection of dependable, flavor-packed meals designed for real life. From quick weeknight dinners to comforting weekend bakes, our recipes are tested by real home cooks to ensure they work every time. We believe that when you strip away the stress of cooking, you're left with the joy of eating and the connection of sharing a meal. Thank you for letting us be a part of your dinner table—let’s make something delicious!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Simple Recipes. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
